@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const StyledContent = styled.div`
   display: flex;
@@ -49,7 +50,9 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Analytics />
+      <Analytics />  {/* For vercel analytics */}
+      <SpeedInsights /> {/* For vercel speed insight */}
+
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
