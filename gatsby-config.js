@@ -23,7 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    'gatsby-plugin-vercel',
+    `gatsby-plugin-vercel`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
