@@ -11,7 +11,7 @@ module.exports = {
     title: 'Faisal Ali Sayyed',
     description:
       "I'm a dedicated Python developer with extensive project experience in frameworks like FastAPI, Flask, and Django, I enjoy watching anime, playing outdoor games, and mobile games.",
-    siteUrl: 'https://github.com/C0DE-SLAYER', // No trailing slash allowed!
+    siteUrl: 'https://c0deslayer.tech', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@c0de_slayer',
   },
@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    'gatsby-plugin-vercel',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
