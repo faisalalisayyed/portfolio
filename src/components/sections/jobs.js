@@ -175,6 +175,12 @@ const Jobs = () => {
         edges {
           node {
             frontmatter {
+              titles {
+                title
+                desc
+                url
+                interest
+                }
               company
             }
             html
@@ -199,8 +205,6 @@ const Jobs = () => {
 
     sr.reveal(revealContainer.current, srConfig());
   }, [prefersReducedMotion]);
-
-  
 
   // Only re-run the effect if tabFocus changes
   useEffect(() => {
@@ -239,6 +243,52 @@ const Jobs = () => {
     }
   };
 
+  const Dropdown = ({ title, url, children }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+      setIsOpen(!isOpen);
+    };
+
+    return (
+      <>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <a href={url} onMouseEnter={toggleDropdown} onMouseOut={toggleDropdown} target="_blank" rel="noreferrer">@ {title}</a>
+          <svg
+            onClick={toggleDropdown}
+            className={`dropdown-arrow ${isOpen ? 'open' : ''}`}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{
+              width: '16px',
+              height: '16px',
+              margin: '10px',
+              transition: 'transform 0.3s ease',
+              transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              cursor: 'pointer',
+            }}>
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <div
+          style={{
+            maxHeight: isOpen ? '200px' : '0',
+            opacity: isOpen ? 1 : 0,
+            overflow: 'hidden',
+            transition: 'max-height 0.3s ease, opacity 0.3s ease',
+          }}>
+          {children}
+        </div>
+      </>
+    );
+  };
+
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
       <h2 className="numbered-heading">Achievements Highlight</h2>
@@ -269,7 +319,8 @@ const Jobs = () => {
         <StyledTabPanels>
           {jobsData &&
             jobsData.map(({ node }, i) => {
-              const { html } = node;
+              const { frontmatter, html } = node;
+              const { titles } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -281,14 +332,31 @@ const Jobs = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}>
 
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </StyledTabPanel>
-                </CSSTransition>
-              );
+                    {titles && titles.map((titleItem, index) => (
+                      <Dropdown key={index} title={titleItem.title} url={titleItem.url}>
+
+                        {titleItem.interest && titleItem.interest.length > 0 ? (
+                          <ul>
+                            {titleItem.interest.map((item, index) => (
+                              <li key={index}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <ul>
+                          <li>{titleItem.desc}</li>
+                          </ul>
+                        )}
+                </Dropdown>
+              ))}
+
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </StyledTabPanel>
+      </CSSTransition>
+      );
             })}
-        </StyledTabPanels>
-      </div>
-    </StyledJobsSection>
+    </StyledTabPanels>
+      </div >
+    </StyledJobsSection >
   );
 };
 

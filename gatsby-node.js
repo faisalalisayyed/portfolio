@@ -1,14 +1,6 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 const path = require('path');
 
-// https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
   if (stage === 'build-html' || stage === 'develop-html') {
     actions.setWebpackConfig({
       module: {
@@ -45,3 +37,19 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   });
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type MarkdownRemarkFrontmatter {
+      titles: [TitleUrl]
+    }
+    
+    type TitleUrl {
+      title: String
+      desc: String
+      url: String
+      interest: [String]
+    }
+  `)
+}
