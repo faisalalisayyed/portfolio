@@ -1,5 +1,9 @@
 ---
 titles:
+    - title: 'CODEFEAST 2.0, Coding Competition - MHSSCE'
+      desc: 'Achieved 1st runner-up by solving a series of five DSA problems, including two easy, two medium and one hard problem. Demonstrated strong problem-solving skills.'
+      url: 'https://drive.google.com/file/d/1OiAeMJ0tKcbw4sNhsF75IgncNI-uaYME'
+
     - title: 'Hacktoberfest 2023 Participant View my tree on Tree-Nation'
       desc: 'Contributed to open source projects as part of the Hacktoberfest 2023 event. Successfully completed the challenge and earned a tree planting certificate.'
       url: 'https://tree-nation.com/trees/view/5289596'

@@ -1,6 +1,18 @@
 ---
 
 titles:
+    - title: 'Python & Django | The Complete Django Web Development Course - Udemy'
+      desc: 'gained hands-on experience in building and deploying web applications using Django, including working with databases, templates, forms, and authentication systems.'
+      url: 'https://www.udemy.com/certificate/UC-a1074b22-220b-4503-bd45-6fd4c32ec9a9'
+
+    - title: 'Python And Flask Framework Complete Course For Beginners - Udemy'
+      desc: 'acquiring foundational skills in developing web applications with Flask, including routing, templating, and integrating with databases.'
+      url: 'https://www.udemy.com/certificate/UC-62ec59bc-4a20-4c0e-ab15-fe328233b4a7'
+
+    - title: 'The SQL MicroDegree 2022: From SQL Basics To MySQL Mastery - Udemy'
+      desc: 'mastering SQL concepts from foundational queries to advanced database management, with practical experience in MySQL.'
+      url: 'https://www.udemy.com/certificate/UC-2b79e486-3326-4858-87bf-1db4e0960efa'
+
     - title: 'Java for Beginners - Udemy'
       desc: 'Learned all the Basics of Java.'
       url: 'https://www.udemy.com/certificate/UC-e969c361-558c-41fb-a849-c730bf41e72a'
@@ -24,6 +36,10 @@ titles:
     - title: 'Android Basics with Jetpack Compose - GDSC MHSSCE Chapter'
       desc: 'Certificate of Completion for completing Android Basics with Jetpack Compose for Android Development in Compose Camp 2022.'
       url: 'https://drive.google.com/file/d/1ixjEgCBe80PB1Tkh1kHbWmJX3UN7B2c6/view'
+
+    - title: 'Postman API Fundamentals Student Expert - Postman'
+      desc: 'gaining expertise in API development, testing, and documentation using Postman, with a focus on building and managing APIs effectively.'
+      url: 'https://badgr.com/public/assertions/cL-c-qzGTOKt4iTJ3WoaGw?identity__email=faisal.612046.it@mhssce.ac.in'
 
 
 company: 'Certificates'
