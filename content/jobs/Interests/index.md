@@ -2,6 +2,7 @@
 
 titles:
     - title: 'Soft Skills'
+      url: '#'
       interest:
         - 'Effective Communication'
         - 'Team Collaboration'
@@ -11,6 +12,7 @@ titles:
         - 'Leadership'
 
     - title: 'Habits'
+      url: '#'
       interest:
         - Continuous Learning
         - Mindfulness Practice
@@ -18,6 +20,7 @@ titles:
         - Goal Setting
 
     - title: 'Hobbies'
+      url: '#'
       interest:
         - Coding and Open Source Contributions
         - Mobile Game

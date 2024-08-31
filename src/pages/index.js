@@ -10,7 +10,8 @@ const StyledMainContainer = styled.main`
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <Helmet>
+    <Helmet htmlAttributes={{lang: 'en'}}>
+      
       {/* Primary Meta Tags */}
       <title>Faisal Ali Sayyed - Portfolio</title>
       <meta name="title" content="Faisal Ali Sayyed - Portfolio" />
