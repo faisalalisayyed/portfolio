@@ -8,12 +8,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Faisal Ali Sayyed',
+    title: `Faisal Ali Sayyed`,
     description:
-      "I'm a dedicated Python developer with extensive project experience in frameworks like FastAPI, Flask, and Django, I enjoy watching anime, playing outdoor games, and mobile games.",
-    siteUrl: 'https://c0deslayer.tech', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@c0de_slayer',
+      `I'm a dedicated Python developer with extensive project experience in frameworks like FastAPI, Flask, and Django, I enjoy watching anime, playing outdoor games, and mobile games.`,
+    twitterUsername: `@c0de_slayer`,
+    image: `/og.png`, 
+    siteUrl: `https://www.c0deslayer.tech`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
